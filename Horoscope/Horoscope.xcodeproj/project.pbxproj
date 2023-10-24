@@ -17,6 +17,17 @@
 		F4F2F6422AE6761300330A30 /* HoroscopeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6412AE6761300330A30 /* HoroscopeUITests.swift */; };
 		F4F2F6442AE6761300330A30 /* HoroscopeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6432AE6761300330A30 /* HoroscopeUITestsLaunchTests.swift */; };
 		F4F2F6522AE6764A00330A30 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6512AE6764A00330A30 /* NetworkManager.swift */; };
+		F4F2F6542AE6790C00330A30 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6532AE6790C00330A30 /* InfoView.swift */; };
+		F4F2F6562AE6792800330A30 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6552AE6792800330A30 /* SplashView.swift */; };
+		F4F2F6592AE67A4300330A30 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6582AE67A4300330A30 /* Enums.swift */; };
+		F4F2F6602AE680CF00330A30 /* InfoViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F65F2AE680CF00330A30 /* InfoViewViewModel.swift */; };
+		F4F2F6632AE6F30500330A30 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6622AE6F30500330A30 /* LogService.swift */; };
+		F4F2F6682AE7933000330A30 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6672AE7933000330A30 /* UtilityFunctions.swift */; };
+		F4F2F66B2AE795A600330A30 /* HoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66A2AE795A600330A30 /* HoroscopeService.swift */; };
+		F4F2F66D2AE7962200330A30 /* HoroSignsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */; };
+		F4F2F66F2AE7966D00330A30 /* ErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */; };
+		F4F2F6722AE7E54E00330A30 /* CustomDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */; };
+		F4F2F6742AE8058500330A30 /* HoroscopeResultResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,17 @@
 		F4F2F6412AE6761300330A30 /* HoroscopeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeUITests.swift; sourceTree = "<group>"; };
 		F4F2F6432AE6761300330A30 /* HoroscopeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4F2F6512AE6764A00330A30 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F4F2F6532AE6790C00330A30 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		F4F2F6552AE6792800330A30 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		F4F2F6582AE67A4300330A30 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F4F2F65F2AE680CF00330A30 /* InfoViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewViewModel.swift; sourceTree = "<group>"; };
+		F4F2F6622AE6F30500330A30 /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
+		F4F2F6672AE7933000330A30 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
+		F4F2F66A2AE795A600330A30 /* HoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeService.swift; sourceTree = "<group>"; };
+		F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroSignsResponseModel.swift; sourceTree = "<group>"; };
+		F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseModel.swift; sourceTree = "<group>"; };
+		F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDown.swift; sourceTree = "<group>"; };
+		F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResultResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +123,10 @@
 		F4F2F61F2AE6761000330A30 /* Horoscope */ = {
 			isa = PBXGroup;
 			children = (
-				F4F2F6502AE6763000330A30 /* Network Service */,
-				F4F2F6202AE6761000330A30 /* HoroscopeApp.swift */,
-				F4F2F6222AE6761000330A30 /* Persistence.swift */,
-				F4F2F6272AE6761000330A30 /* ContentView.swift */,
+				F4F2F65D2AE67FFD00330A30 /* Models */,
+				F4F2F65C2AE67FEA00330A30 /* Services */,
+				F4F2F65B2AE67FDB00330A30 /* Utilities */,
+				F4F2F65A2AE67F6D00330A30 /* Views */,
 				F4F2F6292AE6761300330A30 /* Assets.xcassets */,
 				F4F2F62B2AE6761300330A30 /* Horoscope.entitlements */,
 				F4F2F6242AE6761000330A30 /* Horoscope.xcdatamodeld */,
@@ -141,9 +163,116 @@
 		F4F2F6502AE6763000330A30 /* Network Service */ = {
 			isa = PBXGroup;
 			children = (
+				F4F2F65E2AE6808E00330A30 /* ViewModels */,
 				F4F2F6512AE6764A00330A30 /* NetworkManager.swift */,
 			);
 			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		F4F2F6572AE67A2C00330A30 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6582AE67A4300330A30 /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F4F2F65A2AE67F6D00330A30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6702AE7E53300330A30 /* Components */,
+				F4F2F6202AE6761000330A30 /* HoroscopeApp.swift */,
+				F4F2F6222AE6761000330A30 /* Persistence.swift */,
+				F4F2F6272AE6761000330A30 /* ContentView.swift */,
+				F4F2F6552AE6792800330A30 /* SplashView.swift */,
+				F4F2F6532AE6790C00330A30 /* InfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4F2F65B2AE67FDB00330A30 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6572AE67A2C00330A30 /* Enums */,
+				F4F2F6672AE7933000330A30 /* UtilityFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F4F2F65C2AE67FEA00330A30 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6692AE7953200330A30 /* Horoscope Services */,
+				F4F2F6612AE6F2F800330A30 /* Log Services */,
+				F4F2F6502AE6763000330A30 /* Network Service */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F4F2F65D2AE67FFD00330A30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6662AE6F52A00330A30 /* Data Model */,
+				F4F2F6652AE6F52000330A30 /* Response Models */,
+				F4F2F6642AE6F51500330A30 /* Request Models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4F2F65E2AE6808E00330A30 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F65F2AE680CF00330A30 /* InfoViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F4F2F6612AE6F2F800330A30 /* Log Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6622AE6F30500330A30 /* LogService.swift */,
+			);
+			path = "Log Services";
+			sourceTree = "<group>";
+		};
+		F4F2F6642AE6F51500330A30 /* Request Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Request Models";
+			sourceTree = "<group>";
+		};
+		F4F2F6652AE6F52000330A30 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */,
+				F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */,
+				F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */,
+			);
+			path = "Response Models";
+			sourceTree = "<group>";
+		};
+		F4F2F6662AE6F52A00330A30 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		F4F2F6692AE7953200330A30 /* Horoscope Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F66A2AE795A600330A30 /* HoroscopeService.swift */,
+			);
+			path = "Horoscope Services";
+			sourceTree = "<group>";
+		};
+		F4F2F6702AE7E53300330A30 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,11 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F2F66B2AE795A600330A30 /* HoroscopeService.swift in Sources */,
+				F4F2F6632AE6F30500330A30 /* LogService.swift in Sources */,
+				F4F2F6682AE7933000330A30 /* UtilityFunctions.swift in Sources */,
+				F4F2F6722AE7E54E00330A30 /* CustomDropDown.swift in Sources */,
+				F4F2F66F2AE7966D00330A30 /* ErrorResponseModel.swift in Sources */,
 				F4F2F6262AE6761000330A30 /* Horoscope.xcdatamodeld in Sources */,
+				F4F2F6742AE8058500330A30 /* HoroscopeResultResponseModel.swift in Sources */,
 				F4F2F6212AE6761000330A30 /* HoroscopeApp.swift in Sources */,
+				F4F2F6602AE680CF00330A30 /* InfoViewViewModel.swift in Sources */,
 				F4F2F6522AE6764A00330A30 /* NetworkManager.swift in Sources */,
 				F4F2F6282AE6761000330A30 /* ContentView.swift in Sources */,
+				F4F2F6542AE6790C00330A30 /* InfoView.swift in Sources */,
 				F4F2F6232AE6761000330A30 /* Persistence.swift in Sources */,
+				F4F2F66D2AE7962200330A30 /* HoroSignsResponseModel.swift in Sources */,
+				F4F2F6592AE67A4300330A30 /* Enums.swift in Sources */,
+				F4F2F6562AE6792800330A30 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
