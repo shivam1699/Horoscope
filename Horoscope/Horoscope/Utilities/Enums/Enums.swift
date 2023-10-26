@@ -6,6 +6,11 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
+
+let width = UIScreen.main.bounds.width
+let height = UIScreen.main.bounds.height
 
 enum HTTPRequestMethod : String {
     case GET = "GET"
@@ -15,9 +20,12 @@ enum HTTPRequestMethod : String {
 }
 
 
-enum Endponts {
+enum Endpoints {
 
     static let getSigns = "/get_signs"
+    static let getPeriod = "/get_periods"
+    static let getTypes = "/get_types/today"
+    static let getHoroscope = "/get_horoscope_en"
 }
 
 enum BaseURLs {
@@ -27,9 +35,23 @@ enum BaseURLs {
 }
 
 
+public var apikey = "efd142184dmsh9437dde77b0d01fp1dcb2ajsne21cdb9ae249"
+
 enum StaticHeaders {
   static let headers = [
-        "X-RapidAPI-Key": "efd142184dmsh9437dde77b0d01fp1dcb2ajsne21cdb9ae249",
+        "X-RapidAPI-Key": apikey,
         "X-RapidAPI-Host": "horoscopes-ai.p.rapidapi.com"
     ]
+}
+
+
+enum Assets {
+    static let appIcon =  "Horoscope-app-icon"
+}
+
+enum Colors {
+    
+    static let primary = Color("primary")
+    static let secondary = Color("secondary")
+    static let terthery = Color("terthery")
 }

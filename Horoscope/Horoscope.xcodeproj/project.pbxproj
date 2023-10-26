@@ -24,10 +24,13 @@
 		F4F2F6632AE6F30500330A30 /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6622AE6F30500330A30 /* LogService.swift */; };
 		F4F2F6682AE7933000330A30 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6672AE7933000330A30 /* UtilityFunctions.swift */; };
 		F4F2F66B2AE795A600330A30 /* HoroscopeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66A2AE795A600330A30 /* HoroscopeService.swift */; };
-		F4F2F66D2AE7962200330A30 /* HoroSignsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */; };
+		F4F2F66D2AE7962200330A30 /* HoroTypesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66C2AE7962200330A30 /* HoroTypesResponseModel.swift */; };
 		F4F2F66F2AE7966D00330A30 /* ErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */; };
 		F4F2F6722AE7E54E00330A30 /* CustomDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */; };
 		F4F2F6742AE8058500330A30 /* HoroscopeResultResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */; };
+		F4F2F6762AE83A7800330A30 /* HoroTypesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6752AE83A7800330A30 /* HoroTypesDataModel.swift */; };
+		F4F2F6782AE83E2100330A30 /* HoroscopeResultDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6772AE83E2100330A30 /* HoroscopeResultDataModel.swift */; };
+		F4F2F67A2AE8F57F00330A30 /* CustomPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F2F6792AE8F57F00330A30 /* CustomPopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +72,13 @@
 		F4F2F6622AE6F30500330A30 /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		F4F2F6672AE7933000330A30 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
 		F4F2F66A2AE795A600330A30 /* HoroscopeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeService.swift; sourceTree = "<group>"; };
-		F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroSignsResponseModel.swift; sourceTree = "<group>"; };
+		F4F2F66C2AE7962200330A30 /* HoroTypesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroTypesResponseModel.swift; sourceTree = "<group>"; };
 		F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseModel.swift; sourceTree = "<group>"; };
 		F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDown.swift; sourceTree = "<group>"; };
 		F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResultResponseModel.swift; sourceTree = "<group>"; };
+		F4F2F6752AE83A7800330A30 /* HoroTypesDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroTypesDataModel.swift; sourceTree = "<group>"; };
+		F4F2F6772AE83E2100330A30 /* HoroscopeResultDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeResultDataModel.swift; sourceTree = "<group>"; };
+		F4F2F6792AE8F57F00330A30 /* CustomPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +251,7 @@
 		F4F2F6652AE6F52000330A30 /* Response Models */ = {
 			isa = PBXGroup;
 			children = (
-				F4F2F66C2AE7962200330A30 /* HoroSignsResponseModel.swift */,
+				F4F2F66C2AE7962200330A30 /* HoroTypesResponseModel.swift */,
 				F4F2F66E2AE7966D00330A30 /* ErrorResponseModel.swift */,
 				F4F2F6732AE8058500330A30 /* HoroscopeResultResponseModel.swift */,
 			);
@@ -255,6 +261,8 @@
 		F4F2F6662AE6F52A00330A30 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4F2F6752AE83A7800330A30 /* HoroTypesDataModel.swift */,
+				F4F2F6772AE83E2100330A30 /* HoroscopeResultDataModel.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F2F6712AE7E54E00330A30 /* CustomDropDown.swift */,
+				F4F2F6792AE8F57F00330A30 /* CustomPopUp.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -408,17 +417,20 @@
 				F4F2F66B2AE795A600330A30 /* HoroscopeService.swift in Sources */,
 				F4F2F6632AE6F30500330A30 /* LogService.swift in Sources */,
 				F4F2F6682AE7933000330A30 /* UtilityFunctions.swift in Sources */,
+				F4F2F6762AE83A7800330A30 /* HoroTypesDataModel.swift in Sources */,
 				F4F2F6722AE7E54E00330A30 /* CustomDropDown.swift in Sources */,
+				F4F2F6782AE83E2100330A30 /* HoroscopeResultDataModel.swift in Sources */,
 				F4F2F66F2AE7966D00330A30 /* ErrorResponseModel.swift in Sources */,
 				F4F2F6262AE6761000330A30 /* Horoscope.xcdatamodeld in Sources */,
 				F4F2F6742AE8058500330A30 /* HoroscopeResultResponseModel.swift in Sources */,
+				F4F2F67A2AE8F57F00330A30 /* CustomPopUp.swift in Sources */,
 				F4F2F6212AE6761000330A30 /* HoroscopeApp.swift in Sources */,
 				F4F2F6602AE680CF00330A30 /* InfoViewViewModel.swift in Sources */,
 				F4F2F6522AE6764A00330A30 /* NetworkManager.swift in Sources */,
 				F4F2F6282AE6761000330A30 /* ContentView.swift in Sources */,
 				F4F2F6542AE6790C00330A30 /* InfoView.swift in Sources */,
 				F4F2F6232AE6761000330A30 /* Persistence.swift in Sources */,
-				F4F2F66D2AE7962200330A30 /* HoroSignsResponseModel.swift in Sources */,
+				F4F2F66D2AE7962200330A30 /* HoroTypesResponseModel.swift in Sources */,
 				F4F2F6592AE67A4300330A30 /* Enums.swift in Sources */,
 				F4F2F6562AE6792800330A30 /* SplashView.swift in Sources */,
 			);

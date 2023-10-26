@@ -8,6 +8,7 @@
 import Foundation
 
 
-struct HoroSignsResponseModel : Decodable {
-    let sign : [String?]
+struct HoroTypesResponseModel : Decodable {
+    let today : [String?]
+    let message : String?
 }
