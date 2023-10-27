@@ -9,6 +9,6 @@ import Foundation
 
 
 struct HoroTypesResponseModel : Decodable {
-    let today : [String?]
+    let today : [String]?
     let message : String?
 }

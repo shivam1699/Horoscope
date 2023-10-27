@@ -59,7 +59,7 @@ struct CustomPopUp: View {
                     .overlay{
                         Button(action: {
                             if isInputPopUp {
-                                apikey = key
+                                StaticHeaders.headers.updateValue(key, forKey: "X-RapidAPI-Key")
                                 infoviewModel.loadData()
                             }
                             withAnimation(Animation.default.speed(0.95)){

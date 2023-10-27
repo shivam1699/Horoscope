@@ -16,72 +16,83 @@ struct InfoView: View {
     @State var isSignPickerVisible = false
     @State var isCategoryPickerVisible = false
     @State var isPeriodPickerVisible = false
-    
+
     var body: some View {
         ZStack{
             Colors.terthery
             VStack(spacing : 20){
-                Button(action: {
-                    if isSignPickerVisible || isPeriodPickerVisible {
-                        isSignPickerVisible = false
-                        isPeriodPickerVisible = false
-                        isCategoryPickerVisible.toggle()
-                    }else{
-                        isCategoryPickerVisible.toggle()
+            //Select Category
+                HStack(spacing: 20){
+                    ForEach(infoviewModel.types, id: \.self) { type in
+                            Button(action: {
+                                infoviewModel.selectedCategory = type ?? ""
+                            }, label: {
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Colors.primary ,lineWidth: 1)
+                                        .frame(width: CGFloat(type.count * 12) , height: UIScreen.main.bounds.width / 12)
+                                        .background(infoviewModel.selectedCategory == type ? Colors.primary : Colors.terthery)
+                                        .cornerRadius(20)
+                                    Text(type ?? "ss")
+                                        .foregroundColor(infoviewModel.selectedCategory == type ? Colors.terthery : Colors.primary)
+                                }
+                            })
+                            .foregroundColor(.primary)
+                            .padding(.vertical, 5 )
                     }
-                }) {
-                    Text(infoviewModel.selectedCategory)
-                        .foregroundColor(Colors.terthery)
-                        .frame(width:  UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 12)
-                        .background(Colors.secondary)
-                        .cornerRadius(30)
-                        .shadow(radius: 5 , x: 2 , y: 2 )
-                        .onChange(of: infoviewModel.selectedCategory) { newValue in
-                            infoviewModel.selectedCategory = newValue
-                        }
                 }
                 
-                Button(action: {
-                    if isCategoryPickerVisible || isPeriodPickerVisible {
-                        isCategoryPickerVisible = false
-                        isPeriodPickerVisible = false
-                        isSignPickerVisible.toggle()
-                    }
-                    else{
-                        isSignPickerVisible.toggle()
-                    }
-                }) {
-                    Text(infoviewModel.selectedSign)
-                        .foregroundColor(Colors.terthery)
-                        .frame(width:  UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 12)
-                        .background(Colors.secondary)
-                        .cornerRadius(30)
-                        .shadow(radius: 5 , x: 2 , y: 2 )
-                        .onChange(of: infoviewModel.selectedSign) { newValue in
-                            infoviewModel.selectedSign = newValue
+                //select sign
+                    ScrollView(.horizontal){
+                        HStack(spacing: 20){
+                            ForEach(infoviewModel.signs, id: \.self) { type in
+                            HStack{
+                                Button(action: {
+                                    infoviewModel.selectedSign = type ?? ""
+                                }, label: {
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .stroke(Colors.primary ,lineWidth: 1)
+                                            .frame(width: CGFloat(type.count * 12) , height: UIScreen.main.bounds.width / 12)
+                                            .background(infoviewModel.selectedSign == type ? Colors.primary : Colors.terthery)
+                                            .cornerRadius(20)
+                                        Text(type ?? "ss")
+                                            .foregroundColor(infoviewModel.selectedSign == type ? Colors.terthery : Colors.primary)
+                                    }
+                                })
+                                .foregroundColor(.primary)
+                                .padding(.horizontal, 5 )
+                            }
                         }
-                }
+                    }
+                }.scrollIndicators(.never)
+                    .padding(.leading)
                 
-                Button(action: {
-                    if isCategoryPickerVisible || isSignPickerVisible {
-                        isCategoryPickerVisible = false
-                        isSignPickerVisible = false
-                        isPeriodPickerVisible.toggle()
-                    }
-                    else{
-                        isPeriodPickerVisible.toggle()
-                    }
-                }) {
-                    Text(infoviewModel.selectedPeriod)
-                        .foregroundColor(Colors.terthery)
-                        .frame(width:  UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 12)
-                        .background(Colors.secondary)
-                        .cornerRadius(30)
-                        .shadow(radius: 5 , x: 2 , y: 2 )
-                        .onChange(of: infoviewModel.selectedPeriod) { newValue in
-                            infoviewModel.selectedPeriod = newValue
+                //select period
+                    ScrollView(.horizontal){
+                        HStack(spacing: 20){
+                            ForEach(infoviewModel.horoPeriod, id: \.self) { type in
+                            HStack{
+                                Button(action: {
+                                    infoviewModel.selectedPeriod = type ?? ""
+                                }, label: {
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .stroke(Colors.primary ,lineWidth: 1)
+                                            .frame(width: CGFloat(type.count * 12) , height: UIScreen.main.bounds.width / 12)
+                                            .background(infoviewModel.selectedPeriod == type ? Colors.primary : Colors.terthery)
+                                            .cornerRadius(20)
+                                        Text(type ?? "ss")
+                                            .foregroundColor(infoviewModel.selectedPeriod == type ? Colors.terthery : Colors.primary)
+                                    }
+                                })
+                                .foregroundColor(.primary)
+                                .padding(.horizontal, 5 )
+                            }
                         }
-                }
+                    }
+                }.scrollIndicators(.never)
+                    .padding(.leading)
                 
                 Button(action: {
                     infoviewModel.getHoroscope()
@@ -94,86 +105,33 @@ struct InfoView: View {
                         .cornerRadius(30)
                         .shadow(radius: 5 , x: 2 , y: 2 )
                 }
-                
+                .padding(.top)
             }
+            .padding(.bottom , height / 2.5)
             
-            //sign-picker
-            Picker("Select an option", selection: $infoviewModel.selectedSign) {
-                ForEach(infoviewModel.signs, id: \.self){ sign in
-                    Text(sign)
-                        .foregroundColor(Color.black)
-                }
-            }
-            .pickerStyle(InlinePickerStyle())
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(15)
-            .opacity(isSignPickerVisible ? 1 : 0)
-            .overlay(alignment : .topTrailing){
-                Button(action: {
-                    withAnimation(Animation.default.speed(0.8)){
-                        isSignPickerVisible = false
-                        isCategoryPickerVisible = false
-                        isPeriodPickerVisible = false
+            VStack{
+                HStack{
+                    VStack(alignment: .leading, spacing : 10){
+                        Text("Sign \t\t : \(infoviewModel.horoscopeData.sign ?? "") ")
+                        Text("Category \t : \(self.getCategoryAndData(general: infoviewModel.horoscopeData.general, wellness: infoviewModel.horoscopeData.wellness, career: infoviewModel.horoscopeData.career, love: infoviewModel.horoscopeData.love).0)")
+                        Text("Period \t\t : \(infoviewModel.horoscopeData.period ?? "")")
+                        HStack(alignment: .top){
+                            Text("Prediction \t :")
+                            ScrollView{
+                                VStack(alignment : .leading){
+                                    Text("\(self.getCategoryAndData(general: infoviewModel.horoscopeData.general, wellness: infoviewModel.horoscopeData.wellness, career: infoviewModel.horoscopeData.career, love: infoviewModel.horoscopeData.love).1)")
+                                        .multilineTextAlignment(.leading)
+                                    Spacer()
+                                }
+                            }
+                            .frame(width: width / 1.6, height: height / 3)
+                        }
                     }
-                }) {
-                    Text("Done")
-                        .padding([.trailing , .top] , 10)
-                        .opacity(isSignPickerVisible ? 1 : 0)
+                    Spacer()
                 }
+                .padding([.horizontal])
             }
-            .padding(.top , UIScreen.main.bounds.height / 1.3)
-            
-            //Period picker
-            Picker("Select an option", selection: $infoviewModel.selectedPeriod) {
-                ForEach(infoviewModel.horoPeriod, id: \.self){ period in
-                    Text(period )
-                        .foregroundColor(Color.black)
-                }
-            }
-            .pickerStyle(InlinePickerStyle())
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(15)
-            .opacity(isPeriodPickerVisible ? 1 : 0)
-            .overlay(alignment : .topTrailing){
-                Button(action: {
-                    withAnimation(Animation.default.speed(0.8)){
-                        isSignPickerVisible = false
-                        isCategoryPickerVisible = false
-                        isPeriodPickerVisible = false
-                    }
-                }) {
-                    Text("Done")
-                        .padding([.trailing , .top] , 10)
-                        .opacity(isPeriodPickerVisible ? 1 : 0)
-                }
-            }
-            .padding(.top , UIScreen.main.bounds.height / 1.3)
-            
-            //category picker
-            Picker("Select an option", selection: $infoviewModel.selectedCategory) {
-                ForEach(infoviewModel.types, id: \.self){ type in
-                    Text(type ?? "")
-                        .foregroundColor(Color.black)
-                }
-            }
-            .pickerStyle(InlinePickerStyle())
-            .background(Color.gray.opacity(0.2))
-            .cornerRadius(15)
-            .opacity(isCategoryPickerVisible ? 1 : 0)
-            .overlay(alignment : .topTrailing){
-                Button(action: {
-                    withAnimation(Animation.default.speed(0.8)){
-                        isSignPickerVisible = false
-                        isCategoryPickerVisible = false
-                        isPeriodPickerVisible = false
-                    }
-                }) {
-                    Text("Done")
-                        .padding([.trailing , .top] , 10)
-                        .opacity(isCategoryPickerVisible ? 1 : 0)
-                }
-            }
-            .padding(.top , UIScreen.main.bounds.height / 1.3)
+            .padding(.top , height / 2.1)
         }
         .frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height)
         .ignoresSafeArea()
@@ -183,6 +141,29 @@ struct InfoView: View {
             isPeriodPickerVisible = false
         }
     }
+    func getCategoryAndData(general : [String?]? ,wellness : [String?]? , career : [String?]?  , love : [String?]?) -> (String, String){
+        
+        var returnString = ""
+        var category = ""
+        
+        if let general = general {
+            returnString = general[0] ?? ""
+            category = "General"
+        }
+        if let wellness = wellness{
+            returnString = wellness[0] ?? ""
+            category = "Wellness"
+        }
+        if let career = career{
+            returnString = career[0] ?? ""
+            category = "Career"
+        }
+        if let love = love{
+            returnString = love[0] ?? ""
+            category = "Love"
+        }
+        return (category,returnString)
+    }
 }
 
 struct InfoView_Previews: PreviewProvider {
@@ -191,3 +172,6 @@ struct InfoView_Previews: PreviewProvider {
             .environmentObject(InfoViewViewModel())
     }
 }
+
+
+

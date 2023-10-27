@@ -38,7 +38,7 @@ enum BaseURLs {
 public var apikey = "efd142184dmsh9437dde77b0d01fp1dcb2ajsne21cdb9ae249"
 
 enum StaticHeaders {
-  static let headers = [
+  static var headers = [
         "X-RapidAPI-Key": apikey,
         "X-RapidAPI-Host": "horoscopes-ai.p.rapidapi.com"
     ]

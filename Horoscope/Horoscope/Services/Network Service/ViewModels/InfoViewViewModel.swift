@@ -13,16 +13,16 @@ class InfoViewViewModel : ObservableObject {
     @Published var isDataLoaded = false
     @Published var signs : [String] = []
     @Published var horoPeriod : [String] = []
-    @Published var types : [String?] = []
+    @Published var types : [String] = []
     
     @Published var selectedSign = "Select Sign"
-    @Published var selectedCategory = "Select Type"
+//    @Published var selectedCategory = "Select Type"
     @Published var selectedPeriod = "Select Period"
     @Published var staticHeader = StaticHeaders.headers.keys
     
-    @Published var horoscopeData = HoroscopeResultDataModel(sign: "", period: "", language: "", general: [""])
+    @Published var horoscopeData = HoroscopeResultDataModel(sign: "", period: "", language: "", general: [""], love: [""], career: [""], wellness: [""])
     @Published var keyExpired = false
-    
+    @Published var selectedCategory: String = "Select Category"
     
     
     func loadData(){
@@ -52,7 +52,7 @@ class InfoViewViewModel : ObservableObject {
                 }
                 if let response = response{
                     DispatchQueue.main.async {
-                        self.types = response.today
+                        self.types = response.today ?? [""]
                     }
                 }
             self.getHoroscopePeriod()
@@ -73,11 +73,11 @@ class InfoViewViewModel : ObservableObject {
     }
     
     func getHoroscope(){
-        horoscopeService.getHoroscope(period: self.selectedPeriod, sign: self.selectedSign, type: "love") { response, data in
+        horoscopeService.getHoroscope(period: self.selectedPeriod, sign: self.selectedSign, type: self.selectedCategory) { response, data in
             
             if let response = response {
                 DispatchQueue.main.async {
-                    self.horoscopeData = HoroscopeResultDataModel(sign: response.sign, period: response.period, language: response.language, general: response.general)
+                    self.horoscopeData = HoroscopeResultDataModel(sign: response.sign, period: response.period, language: response.language, general: response.general, love: response.love, career: response.career, wellness: response.wellness)
                 }
             }
         }
